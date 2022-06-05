@@ -1,0 +1,52 @@
+{
+  "name": "base-unicode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "typings": "dist/index.d.ts",
+  "description": "Encodes text and binary data to a subset of Unicode plane 1 (BMP). Runs in browser and Node.js. Character compression. Makes binary data copy-pastable. URL-safe.",
+  "keywords": [
+    "base-unicode",
+    "compression",
+    "encode",
+    "decode",
+    "string",
+    "binary",
+    "typescript",
+    "browser",
+    "Node.js",
+    "UTF16",
+    "UCS-2",
+    "URI",
+    "URL-safe",
+    "copy-pastable"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "esbuild src/index.ts --format=cjs --bundle --minify --target=chrome58 --outfile=index.js",
+    "postbuild": "tsc",
+    "deploy": "npm pack",
+    "pretest": "yarn build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyr0/base-unicode.git"
+  },
+  "author": "Aron Homberg <info@aron-homberg.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kyr0/base-unicode/issues"
+  },
+  "homepage": "https://github.com/kyr0/base-unicode#readme",
+  "dependencies": {
+    "buffer": "^6.0.3"
+  },
+  "devDependencies": {
+    "brotli-wasm": "^1.2.0",
+    "@types/jest": "^27.5.1",
+    "esbuild": "^0.14.3",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.6.2"
+  }
+}
