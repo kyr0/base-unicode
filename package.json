@@ -24,7 +24,7 @@
     "prebuild": "rm -rf dist",
     "build": "esbuild src/index.ts --format=cjs --bundle --minify --target=chrome58 --outfile=index.js",
     "postbuild": "tsc",
-    "deploy": "npm pack",
+    "deploy": "npm publish",
     "pretest": "yarn build",
     "test": "jest"
   },

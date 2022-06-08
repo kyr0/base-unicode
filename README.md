@@ -12,6 +12,8 @@ This again allows e.g. for sharing binary and text data in a character compresse
 form that can be easily copied and pasted, for example as a parameter in a URL or
 even via twitter.
 
+<img src="./jest_results.png" />
+
 ## Setup
 
 As a package for development (Node.js, Browsers):
