@@ -2,6 +2,7 @@
   "name": "base-unicode",
   "version": "1.0.0",
   "main": "index.js",
+  "module": "index.mjs",
   "typings": "dist/index.d.ts",
   "description": "Encodes text and binary data to a subset of Unicode plane 1 (BMP). Runs in browser and Node.js. Character compression. Makes binary data copy-pastable. URL-safe.",
   "keywords": [
@@ -22,7 +23,7 @@
   ],
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "esbuild src/index.ts --format=cjs --bundle --minify --target=chrome58 --outfile=index.js",
+    "build": "ts-node build.ts",
     "postbuild": "tsc",
     "deploy": "npm publish",
     "pretest": "yarn build",
