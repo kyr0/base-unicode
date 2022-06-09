@@ -7,17 +7,17 @@ it('Encodes and decodes < 1 block size text, latin1 chars only', () => {
   const singleCharInput = 'my-data-testv'
   const encodedWithBlocks = encode(singleCharInput)
   const decodedWithBlocks = decodeToString(encodedWithBlocks)
-  expect(singleCharInput).toStrictEqual(decodedWithBlocks)
+  expect(decodedWithBlocks).toStrictEqual(singleCharInput)
 })
 
-/*
 it('Encodes and decodes < 1 block size text', () => {
   const singleCharInput = '🤖'
   const encodedWithBlocks = encode(singleCharInput)
   const decodedWithBlocks = decodeToString(encodedWithBlocks)
-  expect(singleCharInput).toStrictEqual(decodedWithBlocks)
+  expect(decodedWithBlocks).toStrictEqual(singleCharInput)
 })
 
+/*
 it('Encodes and decodes exactly 1 block size text', () => {
   const oneBlockInput = 'Hello🤖!'
   const encodedWithBlocks = encode(oneBlockInput)
